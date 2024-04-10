@@ -3,28 +3,32 @@
   "version": "1.0.0",
   "description": "```bash\r npm i\r ```",
   "main": "index.js",
-	"scripts": {
+  "scripts": {
 		"test": "echo 'Привет!'",
 		"check": "prettier --check './src/**/*.{html,css,js}'",
-		"format": "prettier --write './src/**/*.{html,css,js}'",
-		"lint": "stylelint './src/**/*.css'",
-		"lintfix": "stylelint './src/**/*.css' --fix",
+		"format": "prettier --write \"./**/*.{html,css,js}\"",
+		"lint": "stylelint \"src/**/*.css\"",
+		"lintfix": "stylelint \"src/**/*.css\" --fix",
 		"checkAll": "npm run check && npm run lint",
 		"fixAll": "npm run format && npm run lintfix",
 		"build": "gulp build",
 		"dev": "gulp",
 		"fixAndBuild": "npm run fixAll && npm run build",
-		"lintfixAndPush": "npm run fixAll && git add . && git commit -m 'подготовили к публикации' && git push"
+		"lintfixAndPush": "npm run fixAll && git add . && git commit -m \"подготовили к публикации\" && git push"
 	},
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.0.0",
     "browser-sync": "^3.0.2",
     "del": "^6.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "globals": "^15.0.0",
     "gulp": "^5.0.0",
     "gulp-concat-css": "^3.1.0",
     "gulp-plumber": "^1.2.1",
-    "prettier": "^2.8.8",
+    "prettier": "2.8.8",
     "stylelint": "^15.11.0"
   },
   "dependencies": {
