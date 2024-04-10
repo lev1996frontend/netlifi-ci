@@ -4,18 +4,18 @@
   "description": "```bash\r npm i\r ```",
   "main": "index.js",
   "scripts": {
-		"test": "echo 'Привет!'",
-		"check": "prettier --check './src/**/*.{html,css,js}'",
-		"format": "prettier --write \"./**/*.{html,css,js}\"",
-		"lint": "stylelint \"src/**/*.css\"",
-		"lintfix": "stylelint \"src/**/*.css\" --fix",
-		"checkAll": "npm run check && npm run lint",
-		"fixAll": "npm run format && npm run lintfix",
-		"build": "gulp build",
-		"dev": "gulp",
-		"fixAndBuild": "npm run fixAll && npm run build",
-		"lintfixAndPush": "npm run fixAll && git add . && git commit -m \"подготовили к публикации\" && git push"
-	},
+    "test": "echo 'Привет!'",
+    "check": "prettier --check './src/**/*.{html,css,js}'",
+    "format": "prettier --write \"./**/*.{html,css,js}\"",
+    "lint": "stylelint \"src/**/*.css\"",
+    "lintfix": "stylelint \"src/**/*.css\" --fix",
+    "checkAll": "npm run check && npm run lint",
+    "fixAll": "npm run format && npm run lintfix",
+    "build": "gulp build",
+    "dev": "gulp",
+    "fixAndBuild": "npm run fixAll && npm run build",
+    "lintfixAndPush": "npm run fixAll && git add . && git commit -m \"подготовили к публикации\" && git push"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -28,9 +28,14 @@
     "gulp": "^5.0.0",
     "gulp-concat-css": "^3.1.0",
     "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "postcss": "^8.4.38",
     "prettier": "2.8.8",
     "stylelint": "^15.11.0"
   },
+  "browserslist": [
+    "last 5 versions"
+  ],
   "dependencies": {
     "ajv": "^8.12.0",
     "ansi-regex": "^5.0.1",
@@ -197,7 +202,6 @@
     "path-type": "^4.0.0",
     "picocolors": "^1.0.0",
     "picomatch": "^2.3.1",
-    "postcss": "^8.4.21",
     "postcss-media-query-parser": "^0.2.3",
     "postcss-resolve-nested-selector": "^0.1.1",
     "postcss-safe-parser": "^6.0.0",
